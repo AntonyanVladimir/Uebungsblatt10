@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+    <div>
+        <input type="text" id="value1" value="20" onchange="berechnen()">
+        <select name="" id="options">
+            <option value="+">add</option>
+            <option value="*">mul</option>
+            <option value="-">sub</option>
+            <option value="/">div</option>
+        </select>
+        <input type="text" id="value2" value="45" onchange="berechnen()"><span>  =  </span> <span id="ergebnis"></span>
+        <button class="btns btn-primary" id="button" onclick="berechnen()">Berechnen</button>
+    </div>
+    <script>
+        // var request;
+        //   request = new XMLHttpRequest();
+
+         
+    //   $(document).ready(function(){
+    //       $('#button').click(()=>{
+    //         let value1 = $('#value1').val();
+    //       let value2 = $('#value2').val();
+    //       let e = document.getElementById('options');
+    //       let option = e.options[e.selectedIndex].text;
+    //           $.get(`http://localhost:4500/${option}/${value1}/${value2}`, function(data, status){
+    //             $('#ergebnis').html(data); 
+    //           })
+    //       })
+    //   })
+    function berechnen() {
+                    var request = new XMLHttpRequest();
+                    let value1 = document.getElementById('value1').value;
+                    let value2 = document.getElementById('value2').value;
+                    let e = document.getElementById('options');
+                    let option = e.options[e.selectedIndex].text;
+                    request.open('GET', `http://localhost:5000/${option}/${value1}/${value2}`, true)
+                    request.onreadystatechange = function () {
+                        if(this.readyState == 4 && this.status ==200){
+                            document.getElementById('ergebnis').innerHTML = request.responseText;
+                        }
+                    }
+                    request.send();
+    }
+    </script>
+    
+</body>
+</html>
