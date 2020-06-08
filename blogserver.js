@@ -71,7 +71,29 @@ app.put('/articles/:id', (req, res)=>{
 	artikelToBeChanged.tags = req.body.tags;
 
 	res.send(artikelToBeChanged);
-})
+});
+
+app.get('/tags', (req, res)=>{
+	 var tagMap = new Map();
+	
+	//alle TagNames als Schlüssel ins Map
+	for(let art of ARTICLES){
+		for(let tag of art.tags){
+			 if(!tagMap.has(tag)){
+				tagMap.set(tag, {val:1});
+			 }
+			
+			else{
+			  tagMap.get(tag).val++;
+				
+			}
+			 
+		}
+	}
+	var jsonText = JSON.stringify(Array.from(tagMap.entries()));
+	res.send(jsonText);
+
+});
 
 
 //Testdaten
