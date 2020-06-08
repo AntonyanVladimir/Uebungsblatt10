@@ -1,5 +1,8 @@
 const express = require('express');
 const app = express();
+/*xxxxx*/
+var bodyParser = require('body-parser');
+app.use(bodyParser());
 app.listen(3000, ()=>{console.log('Listening on Port 3000...')});
 
 
@@ -12,10 +15,11 @@ app.get('/articles', (req, res)=>{
         var suchwort = req.query.suchwort;
         var artikels;
         if(tagName&&suchwort){
-           let artikelsFromTag =getArticlesByTag(tagName, ARTICLES);
-           let artikelsFromSuchwort = getArticlesBySearchstring(suchwort, ARTICLES);
-           artikels = artikelsFromTag.concat(artikelsFromSuchwort);
-           res.send(JSON.stringify(artikels));
+		   let artikelsFromTag = getArticlesByTag(tagName, ARTICLES);
+		   let artikelsFromSuchwort = getArticlesBySearchstring(suchwort, artikelsFromTag);
+          
+          // artikels = artikelsFromTag.concat(artikelsFromSuchwort);
+           res.send(JSON.stringify(artikelsFromSuchwort));
         }
         if(tagName){
          artikels= getArticlesByTag(tagName, ARTICLES);
@@ -40,6 +44,34 @@ app.get('/articles/:id', (req, res)=>{
     }
 
 });
+
+app.delete('/articles/:id', (req, res)=>{
+	var artikelToBeDeleted = ARTICLES.find(a=>a.id===req.params.id);
+	if(!artikelToBeDeleted)
+	res.status(404).send('Das Artikel wurde nicht gefunden.');
+
+	const index = ARTICLES.indexOf(artikelToBeDeleted);
+	ARTICLES.splice(index, 1);
+	res.send('Wrude erfolgreich gelöscht.')
+});
+
+app.put('/articles/:id', (req, res)=>{
+	var artikelToBeChanged = ARTICLES.find(a =>a.id === req.params.id);
+    if(!artikelToBeChanged)
+    	res.status(404).send('Das Artikel wurde nicht gefunden');
+	
+	
+	artikelToBeChanged.ueberschrift = req.body.ueberschrift;
+	artikelToBeChanged.anriss = req.body.anriss;
+	artikelToBeChanged.autor = req.body.autor;
+	artikelToBeChanged.bild = req.body.bild;
+	artikelToBeChanged.datum = req.body.datum;
+	artikelToBeChanged.text = req.body.text;
+	artikelToBeChanged.id = req.body.id;
+	artikelToBeChanged.tags = req.body.tags;
+
+	res.send(artikelToBeChanged);
+})
 
 
 //Testdaten
