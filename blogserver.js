@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 const fs = require('fs');
+const cors = require('cors');
+
+app.use(cors());
 var ARTICLES = [];
 
 var filename = __dirname + '/public/articles.json';
@@ -93,14 +96,13 @@ app.get('/tags', (req, res)=>{
 	for(let art of ARTICLES){
 		for(let tag of art.tags){
 			 if(!tagMap.has(tag)){
-				tagMap.set(tag, {val:1});
+				tagMap.set(tag, 1);
 			 }
 			
 			else{
-			  tagMap.get(tag).val++;
-				
+			  let tagCount = tagMap.get(tag);	
+			  tagMap.set(tag, ++tagCount);
 			}
-			 
 		}
 	}
 	var jsonText = JSON.stringify(Array.from(tagMap.entries()));
