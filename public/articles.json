@@ -39,5 +39,61 @@
         "HTML5",
         "Element"
       ]
+    },
+    {
+      "id": 4,
+      "ueberschrift": "Semantische Strukturierung von HTML-Seiten",
+      "autor": "Thomas Richter",
+      "datum": "2015-02-15T20:14:00.000Z",
+      "anriss": "Ein kurzer Überblick über semantische Elemente in HTML5.",
+      "text": "In der Vergangenheit wurden HTML-Dokumente häufig mit Tabellen oder Frames (ok, sehr weit zurückliegende Vergangenheit...) strukturiert. Später wurden dafür <code>&lt;div&gt;</code>-Elemente verwendet. In HTML5 gibt es Elemente, die es erlauben, den einzelnen Teilen des Dokuments eine Semantik zu verleihen, die von modernen Browsern ausgewertet wird und ggf. die Darstellung - z. B. auf Mobilgeräten und in Readern - beeinflusst. Beispielsweise lässt sich ein Dokument mit den Elementen <code>&lt;header&gt;, &lt;main&gt;, &lt;footer&gt;</code> grob in Kopf-, Inhalts- und Fußbereich unterteilen. Weitere semantische Elemente sind <code>&lt;nav&gt;, &lt;aside&gt;, &lt;article&gt;, &lt;section&gt;</code>",
+      "bild": "https://cdn.pixabay.com/photo/2020/06/15/16/05/animal-5302420_1280.jpg",
+      "tags": [
+        "Semantik",
+        "HTML5",
+        "Element"
+      ]
+    },
+    {
+      "id": 5,
+      "ueberschrift": "Semantische Strukturierung von HTML-Seiten",
+      "autor": "Thomas Richter",
+      "datum": "2015-02-15T20:14:00.000Z",
+      "anriss": "Ein kurzer Überblick über semantische Elemente in HTML5.",
+      "text": "In der Vergangenheit wurden HTML-Dokumente häufig mit Tabellen oder Frames (ok, sehr weit zurückliegende Vergangenheit...) strukturiert. Später wurden dafür <code>&lt;div&gt;</code>-Elemente verwendet. In HTML5 gibt es Elemente, die es erlauben, den einzelnen Teilen des Dokuments eine Semantik zu verleihen, die von modernen Browsern ausgewertet wird und ggf. die Darstellung - z. B. auf Mobilgeräten und in Readern - beeinflusst. Beispielsweise lässt sich ein Dokument mit den Elementen <code>&lt;header&gt;, &lt;main&gt;, &lt;footer&gt;</code> grob in Kopf-, Inhalts- und Fußbereich unterteilen. Weitere semantische Elemente sind <code>&lt;nav&gt;, &lt;aside&gt;, &lt;article&gt;, &lt;section&gt;</code>",
+      "bild": "https://cdn.pixabay.com/photo/2020/05/12/17/04/wind-turbine-5163993_1280.jpg",
+      "tags": [
+        "Semantik",
+        "HTML5",
+        "Element"
+      ]
+    },
+    {
+      "id": 6,
+      "ueberschrift": "Semantische Strukturierung von HTML-Seiten",
+      "autor": "Thomas Richter",
+      "datum": "2015-02-15T20:14:00.000Z",
+      "anriss": "Ein kurzer Überblick über semantische Elemente in HTML5.",
+      "text": "In der Vergangenheit wurden HTML-Dokumente häufig mit Tabellen oder Frames (ok, sehr weit zurückliegende Vergangenheit...) strukturiert. Später wurden dafür <code>&lt;div&gt;</code>-Elemente verwendet. In HTML5 gibt es Elemente, die es erlauben, den einzelnen Teilen des Dokuments eine Semantik zu verleihen, die von modernen Browsern ausgewertet wird und ggf. die Darstellung - z. B. auf Mobilgeräten und in Readern - beeinflusst. Beispielsweise lässt sich ein Dokument mit den Elementen <code>&lt;header&gt;, &lt;main&gt;, &lt;footer&gt;</code> grob in Kopf-, Inhalts- und Fußbereich unterteilen. Weitere semantische Elemente sind <code>&lt;nav&gt;, &lt;aside&gt;, &lt;article&gt;, &lt;section&gt;</code>",
+      "bild": "https://cdn.pixabay.com/photo/2020/06/09/15/16/brugge-5278796_1280.jpg",
+      "tags": [
+        "Semantik",
+        "HTML5",
+        "Element"
+      ]
+    },
+    {
+      "id": 7,
+      "ueberschrift": "Semantische Strukturierung von HTML-Seiten",
+      "autor": "Thomas Richter",
+      "datum": "2015-02-15T20:14:00.000Z",
+      "anriss": "Ein kurzer Überblick über semantische Elemente in HTML5.",
+      "text": "In der Vergangenheit wurden HTML-Dokumente häufig mit Tabellen oder Frames (ok, sehr weit zurückliegende Vergangenheit...) strukturiert. Später wurden dafür <code>&lt;div&gt;</code>-Elemente verwendet. In HTML5 gibt es Elemente, die es erlauben, den einzelnen Teilen des Dokuments eine Semantik zu verleihen, die von modernen Browsern ausgewertet wird und ggf. die Darstellung - z. B. auf Mobilgeräten und in Readern - beeinflusst. Beispielsweise lässt sich ein Dokument mit den Elementen <code>&lt;header&gt;, &lt;main&gt;, &lt;footer&gt;</code> grob in Kopf-, Inhalts- und Fußbereich unterteilen. Weitere semantische Elemente sind <code>&lt;nav&gt;, &lt;aside&gt;, &lt;article&gt;, &lt;section&gt;</code>",
+      "bild": "https://cdn.pixabay.com/photo/2020/04/20/18/10/cinema-5069314_960_720.jpg",
+      "tags": [
+        "Semantik",
+        "HTML5",
+        "Element"
+      ]
     }
   ]
